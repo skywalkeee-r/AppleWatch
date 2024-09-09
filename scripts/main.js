@@ -1,4 +1,4 @@
-const WeatherAPI = "4606818ab13e2b73fc53e4685076e8c8";
+const WeatherAPI = "ffe84f8bc1c42d7dc4f1c0b57f665f60";
 var watch = new Vue({
     el: ".watch",
     data: {
@@ -61,7 +61,7 @@ var watch = new Vue({
             console.log(this.Animationseconds);
             if (this.Animationseconds < 1) {
                 clearInterval(this.timeIntervalID);
-                alert("Времечко закончилось");
+                alert("Время вышло");
                 this.timeAnimation = false;
                 this.startTimer = false;
                 this.pauseTimer = false;
