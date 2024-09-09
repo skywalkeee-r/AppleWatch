@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="watch">
+        <div class="WatchBase">
+            <img src="Img/WatchBase.png" alt="" class="WatchBase">
+        </div>
+        <div class="content">
+            <div class="bg" @click="Unlock">
+                <img v-bind:src="'Img/'+lockbg" alt="">
+                <div class="time">
+                    <h4>{{hour}}:{{minutes}}</h4>
+                    <p>{{date}} {{day}}.{{month}}.{{year}}</p>
+                </div>
+            </div>
+            <div class="bg" v-bind:class="{ swipe: isOnlock }">
+                <img v-bind:src="'Img/'+mainbg" alt="">
+                <img src="Img/Main Menu.jpg" alt="" class="watch_icon icon1" @click="isOnlock=false">
+                <img src="Img/Settings.jpg" alt="" class="watch_icon icon2" @click="OpenSettings">
+                <img src="Img/App Store.jpg" alt="" class="watch_icon icon3">
+                <img src="Img/Weather.jpg" alt="" class="watch_icon icon4" @click="OpenWeather">
+                <img src="Img/Photo.jpg" alt="" class="watch_icon icon5">
+                <img src="Img/Timer.jpg" alt="" class="watch_icon icon6" @click="OpenTimer">
+                <img src="Img/Maps.jpg" alt="" class="watch_icon icon7" @click="OpenMaps">
+            </div>
+        </div>
+        <div class="settings" v-bind:class="{ open_app: openSettings }">
+            <button @click="openSettings=false">Назад</button>
+            <button @click="ChooseWallpaper(); isMainbg=false">Сменить экран блокировки</button>
+            <button @click="ChooseWallpaper(); isMainbg=true">Сменить экран домой</button>
+        </div>
+        <div class="wallpaper" v-bind:class="{ open_app: choosewallpaper }">
+            <img src="Img/London.jpg" alt="" @click="ChangeLockbg('London.jpg')">
+            <img src="Img/Paris.jpg" alt="" @click="ChangeLockbg('Paris.jpg')">
+            <img src="Img/Smoke.png" alt="" @click="ChangeLockbg('Smoke.png')">
+            <img src="Img/Steam.jpg" alt="" @click="ChangeLockbg('Steam.jpg')">
+            <img src="Img/Pattern.jpg" alt="" @click="ChangeLockbg('Pattern.jpg')">
+            <button @click="choosewallpaper=false">Назад</button>
+        </div>
+        <div class="maps" v-bind:class="{ open_app: openMaps }">
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8720eed0f9ce28e8f41f4680a74234dea4fda317b7c05d63e9e23a99eced23d&amp;source=constructor"
+                width="240" height="300" frameborder="0"></iframe>
+            <button @click="openMaps=false">Назад</button>
+        </div>
+        <div class="weather" v-bind:class="{ open_app: openWeather }">
+            <button @click="openWeather=false">Назад</button>
+            <h2>{{place}}</h2>
+            <img v-bind:src="tempiconname" alt="">
+            <h1>{{temp}}°C</h1>
+        </div>
+        <div class="timer" v-bind:class="{ open_app: openTimer }">
+            <button @click="openTimer=false" class="closetimer">Назад</button>
+            <div class="timeranimation">
+                <div class="scale" v-bind:class="{ timeranim: timeAnimation }"
+                    :style="{ 'animation-duration': Animationseconds + 's' }"></div>
+            </div>
+            <div class="numbers">
+                <input type="number" max="23" min="0" class="hours" value="0">
+                <p>:</p>
+                <input type="number" max="59" min="0" class="minutes" value="0">
+                <p>:</p>
+                <input type="number" max="59" min="0" class="seconds" value="5">
+            </div>
+            <div class="сountdown">
+                <button class="starttimer" @click="StartTimer(); StartTimeAnimation();" v-if="!startTimer">Старт</button>
+                <button class="canceltimer" @click="CancelTimer" v-if="startTimer">Отмена</button>
+                <button class="pausetimer" @click="PauseTimer" v-if="!pauseTimer && startTimer">Пауза</button>
+                <button class="continuationtimer" @click="ContinuationTimer" v-if="pauseTimer && startTimer">Дальше</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
