@@ -39,27 +39,26 @@
             <button @click="ChooseWallpaper(); isMainbg=true">Сменить экран домой</button>
         </div>
         <div class="wallpaper" v-bind:class="{ open_app: choosewallpaper }">
-            <img src="Img/London.jpg" alt="" @click="ChangeLockbg('London.jpg')">
+            <button @click="choosewallpaper=false"><img src="Img/IMG_9692.png" alt="" class="back_button_wallpaper"></button>">
             <img src="Img/Paris.jpg" alt="" @click="ChangeLockbg('Paris.jpg')">
             <img src="Img/Smoke.png" alt="" @click="ChangeLockbg('Smoke.png')">
             <img src="Img/Steam.jpg" alt="" @click="ChangeLockbg('Steam.jpg')">
             <img src="Img/Pattern.jpg" alt="" @click="ChangeLockbg('Pattern.jpg')">
-            <button @click="choosewallpaper=false">Назад</button>
         </div>
         <div class="maps" v-bind:class="{ open_app: openMaps }">
             <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8720eed0f9ce28e8f41f4680a74234dea4fda317b7c05d63e9e23a99eced23d&amp;source=constructor"
                 width="240" height="300" frameborder="0"></iframe>
-            <button @click="openMaps=false">Назад</button>
+            <button @click="openMaps=false"><img src="Img/IMG_9692.png" alt=""></button>
         </div>
         <div class="weather" v-bind:class="{ open_app: openWeather }">
-            <button @click="openWeather=false">Назад</button>
+            <button @click="openWeather=false"><img src="Img/IMG_9692.png" alt="" class="back_button_weather"></button>
             <h2>{{place}}</h2>
             <img v-bind:src="tempiconname" alt="">
             <h1>{{temp}}°C</h1>
         </div>
         <div class="timer" v-bind:class="{ open_app: openTimer }">
-            <button @click="openTimer=false" class="closetimer">Назад</button>
+            <button @click="openTimer=false" class="closetimer"><img src="Img/IMG_9692.png" alt="" class="back_button_timer"></button>
             <div class="timeranimation">
                 <div class="scale" v-bind:class="{ timeranim: timeAnimation }"
                     :style="{ 'animation-duration': Animationseconds + 's' }"></div>
@@ -72,10 +71,10 @@
                 <input type="number" max="59" min="0" class="seconds" value="5">
             </div>
             <div class="сountdown">
-                <button class="starttimer" @click="StartTimer(); StartTimeAnimation();" v-if="!startTimer">Старт</button>
-                <button class="canceltimer" @click="CancelTimer" v-if="startTimer">Отмена</button>
-                <button class="pausetimer" @click="PauseTimer" v-if="!pauseTimer && startTimer">Пауза</button>
-                <button class="continuationtimer" @click="ContinuationTimer" v-if="pauseTimer && startTimer">Дальше</button>
+                <button class="starttimer" @click="StartTimer(); StartTimeAnimation();" v-if="!startTimer"><img src="Img/IMG_9701.png" alt=""></button>
+                <button class="canceltimer" @click="CancelTimer" v-if="startTimer"><img src="Img/IMG_9703.png" alt=""></button>
+                <button class="pausetimer" @click="PauseTimer" v-if="!pauseTimer && startTimer"><img src="Img/IMG_9702.png" alt=""></button>
+                <button class="continuationtimer" @click="ContinuationTimer" v-if="pauseTimer && startTimer"><img src="Img/IMG_9704.png" alt=""></button>
             </div>
         </div>
     </div>
