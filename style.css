@@ -190,10 +190,22 @@
     border-radius: 65px;
 }
 
-.maps button {
+.maps div {
+    display: flex;
+    align-items: center;
     position: relative;
-    left: -220px;
-    top: -235px;
+    bottom: 275px;
+    left: 25px;
+}
+
+.maps div p {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.maps div img {
+    height: 20px;
+    width: 20px;
 }
 
 .weather {
@@ -241,6 +253,10 @@
     margin: 0;
 }
 
+.сountdown {
+    display: flex;
+}
+
 .timer {
     display: none;
     position: relative;
@@ -267,6 +283,45 @@
     border: none;
 }
 
+.canceltimer {
+    margin-top: 15px;
+    margin-left: 57px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.canceltimer img {
+    width: 60px;
+    height: 60px;
+}
+
+.continuationtimer {
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.continuationtimer img {
+    width: 60px;
+    height: 60px;
+}
+
+.pausetimer {
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.pausetimer img {
+    width: 60px;
+    height: 60px;
+}
+
 .numbers {
     margin-left: 50px;
 }
@@ -283,8 +338,16 @@
 }
 
 .starttimer {
-    margin-top: 30px;
-    margin-left: 98px;
+    margin-top: 15px;
+    margin-left: 95px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.starttimer img {
+    width: 60px;
+    height: 60px;
 }
 
 .timeranimation {
