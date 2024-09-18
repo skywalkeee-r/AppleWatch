@@ -34,13 +34,18 @@
             </div>
         </div>
         <div class="settings" v-bind:class="{ open_app: openSettings }">
-            <button @click="openSettings=false"><img src="Img/IMG_9692.png" alt=""></button>
-            <button @click="ChooseWallpaper(); isMainbg=false">Сменить экран блокировки</button>
+            <div @click="openSettings=false" class="back">
+                <img src="Img/IMG_9725-Photoroom.png" alt="" class="img_back">
+                <p class="p_back">Назад</p>
+            </div>
+            <button @click="ChooseWallpaper(); isMainbg=false" class="change_lockscreen">Сменить экран блокировки</button>
             <button @click="ChooseWallpaper(); isMainbg=true">Сменить экран домой</button>
         </div>
         <div class="wallpaper" v-bind:class="{ open_app: choosewallpaper }">
-            <button @click="choosewallpaper=false"><img src="Img/IMG_9692.png" alt=""
-                    class="back_button_wallpaper"></button>">
+            <div @click="choosewallpaper=false" class="back">
+                <img src="Img/IMG_9725-Photoroom.png" alt="" class="img_back">
+                <p class="p_back">Назад</p>
+            </div>
             <img src="Img/Paris.jpg" alt="" @click="ChangeLockbg('Paris.jpg')">
             <img src="Img/Smoke.png" alt="" @click="ChangeLockbg('Smoke.png')">
             <img src="Img/Steam.jpg" alt="" @click="ChangeLockbg('Steam.jpg')">
@@ -51,20 +56,25 @@
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8720eed0f9ce28e8f41f4680a74234dea4fda317b7c05d63e9e23a99eced23d&amp;source=constructor"
                 width="240" height="290" frameborder="0">
             </iframe>
-            <div @click="openMaps = false">
-                <img src="Img/IMG_9725-Photoroom.png" alt="">
-                <p>Назад</p>
+            <div @click="openMaps = false" class="back">
+                <img src="Img/IMG_9725-Photoroom.png" alt="" class="img_back">
+                <p class="p_back">Назад</p>
             </div>
         </div>
         <div class="weather" v-bind:class="{ open_app: openWeather }">
-            <button @click="openWeather=false"><img src="Img/IMG_9692.png" alt="" class="back_button_weather"></button>
+            <div @click="openWeather=false" class="back">
+                <img src="Img/IMG_9725-Photoroom.png" alt="" class="img_back">
+                <p class="p_back">Назад</p>
+            </div>
             <h2>{{place}}</h2>
             <img v-bind:src="tempiconname" alt="">
             <h1>{{temp}}°C</h1>
         </div>
         <div class="timer" v-bind:class="{ open_app: openTimer }">
-            <button @click="openTimer=false" class="closetimer"><img src="Img/IMG_9692.png" alt=""
-                    class="back_button_timer"></button>
+            <div @click="openTimer=false" class="back">
+                <img src="Img/IMG_9725-Photoroom.png" alt="" class="img_back">
+                <p class="p_back">Назад</p>
+            </div>
             <div class="timeranimation">
                 <div class="scale" v-bind:class="{ timeranim: timeAnimation }"
                     :style="{ 'animation-duration': Animationseconds + 's' }"></div>

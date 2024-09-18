@@ -112,15 +112,8 @@
     z-index: 2;
 }
 
-.settings button:first-child {
-    margin-top: 50px;
-    background-color: black;
-}
-
-.settings button:first-child img {
-    width: 85px;
-    height: 40px;
-    padding-right: 55px;
+.settings .change_lockscreen {
+    margin-top: 30px;
 }
 
 .settings button {
@@ -128,10 +121,11 @@
     color: rgb(255, 255, 255);
     margin: 0 50px;
     margin-bottom: 10px;
-    border: none;
+    border-radius: 7px;
+    border: 2px solid black;
     padding: 0;
     width: 140px;
-    height: 32px;
+    height: 36px;
 }
 
 
@@ -190,24 +184,6 @@
     border-radius: 65px;
 }
 
-.maps div {
-    display: flex;
-    align-items: center;
-    position: relative;
-    bottom: 275px;
-    left: 25px;
-}
-
-.maps div p {
-    color: rgb(10, 132, 255);
-    font-size: 20px;
-}
-
-.maps div img {
-    height: 20px;
-    width: 20px;
-}
-
 .weather {
     display: none;
     position: relative;
@@ -220,17 +196,6 @@
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     text-align: center;
-}
-
-.weather button {
-    position: relative;
-    right: 50px;
-    bottom: -50px;
-    width: 85px;
-    height: 40px;
-    background-color: black;
-    border: none;
-    padding: 1px;
 }
 
 .weather .back_button_weather {
@@ -388,4 +353,95 @@
     animation-name: timer;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+
+.settings .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.settings .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.settings .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.wallpaper .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.wallpaper .back .img_back {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+.wallpaper .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.weather .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.weather .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.weather .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.maps .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 275px;
+    left: 25px;
+}
+
+.maps .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.maps .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.timer .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.timer .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.timer .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
 }
