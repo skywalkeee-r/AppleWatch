@@ -29,7 +29,7 @@ var watch = new Vue({
     methods: {
         Unlock() { this.isOnlock = true; },
         OpenSettings() { this.openSettings = true; },
-        ChooseWallpaper() { this.choosewallpaper = true; console.log(this.choosewallpaper); },
+        ChooseWallpaper() { this.choosewallpaper = true; },
         ChangeLockbg(src) {
             if (this.isMainbg) {
                 this.mainbg = src;
@@ -43,7 +43,6 @@ var watch = new Vue({
         OpenTimer() { this.openTimer = true; },
         StartTimer() {
             let seconds = document.querySelector(".seconds").value;
-            console.log(seconds);
             let minutes = document.querySelector(".minutes").value;
             let hours = document.querySelector(".hours").value;
             this.Animationseconds = Number(seconds) + Number(minutes * 60) + Number(hours * 3600);
@@ -58,7 +57,6 @@ var watch = new Vue({
         },
         CheckTime() {
             this.Animationseconds = this.Animationseconds - 1;
-            console.log(this.Animationseconds);
             if (this.Animationseconds < 1) {
                 clearInterval(this.timeIntervalID);
                 alert("Время вышло");
@@ -120,28 +118,11 @@ var watch = new Vue({
                     this.date = ("Sun");
                     break;
             }
-            console.log("Время обновлено!");
         }
     }
 })
 setInterval(() => { watch.SetTime() }, 1000);
 watch.SetTime();
-// let geo = navigator.geolocation;
-// geo.getCurrentPosition(GeoOk, GeoError);
-// function GeoOk(position) {
-//     console.log(position);
-//     let lat = position.coords.latitude;
-//     let long = position.coords.longitude;
-//     console.log(lat, long);
-// }
-// function GeoError(er) {
-//     if (er.code == 1) {
-//         alert("Разрешите доступ к местоположению");
-//     }
-//     else {
-//         alert("Ничего не получилось{{{(>_<)}}}");
-//     }
-// }
 window.addEventListener("load", () => {
     let lat;
     let long;
@@ -153,13 +134,10 @@ window.addEventListener("load", () => {
             fetch(link).then((data) => {
                 return data.json();
             }).then((data) => {
-                console.log(data);
                 let main = data.main;
                 watch.temp = Math.floor(main.temp);
                 watch.place = data.name;
                 watch.tempiconname = `https://openweathermap.org/img/wn/${GetWeatherImgName(data.weather[0].id)}.png`;
-                console.log(data.weather[0].id);
-                console.log(watch.temp);
             });
         });
     }
