@@ -112,15 +112,8 @@
     z-index: 2;
 }
 
-.settings button:first-child {
-    margin-top: 50px;
-    background-color: black;
-}
-
-.settings button:first-child img {
-    width: 85px;
-    height: 40px;
-    padding-right: 55px;
+.settings .change_lockscreen {
+    margin-top: 30px;
 }
 
 .settings button {
@@ -128,10 +121,11 @@
     color: rgb(255, 255, 255);
     margin: 0 50px;
     margin-bottom: 10px;
-    border: none;
+    border-radius: 7px;
+    border: 2px solid black;
     padding: 0;
     width: 140px;
-    height: 32px;
+    height: 36px;
 }
 
 
@@ -165,6 +159,19 @@
     border-radius: 10px;
 }
 
+.wallpaper button {
+    border: none;
+    padding-left: 33px;
+    background-color: black;
+}
+
+.wallpaper .back_button_wallpaper {
+    width: 85px;
+    height: 40px;
+    border: none;
+    margin: 0;
+}
+
 .maps {
     display: none;
     position: relative;
@@ -175,12 +182,6 @@
 
 .maps iframe {
     border-radius: 65px;
-}
-
-.maps button {
-    position: relative;
-    left: -220px;
-    top: -235px;
 }
 
 .weather {
@@ -197,14 +198,13 @@
     text-align: center;
 }
 
-.weather button {
-    position: relative;
-    right: 50px;
-    bottom: -50px;
+.weather .back_button_weather {
+    width: 85px;
+    height: 40px;
 }
 
 .weather h2 {
-    padding-top: 50px;
+    margin: 15px;
     margin-bottom: 0;
 }
 
@@ -215,6 +215,10 @@
 
 .weather h1 {
     margin: 0;
+}
+
+.сountdown {
+    display: flex;
 }
 
 .timer {
@@ -230,9 +234,56 @@
     background-color: rgb(0, 0, 0);
 }
 
+.timer .back_button_timer {
+    width: 85px;
+    height: 40px;
+}
+
 .closetimer {
     margin-top: 40px;
     margin-left: 30px;
+    background-color: black;
+    padding: 0;
+    border: none;
+}
+
+.canceltimer {
+    margin-top: 15px;
+    margin-left: 57px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.canceltimer img {
+    width: 60px;
+    height: 60px;
+}
+
+.continuationtimer {
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.continuationtimer img {
+    width: 60px;
+    height: 60px;
+}
+
+.pausetimer {
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.pausetimer img {
+    width: 60px;
+    height: 60px;
 }
 
 .numbers {
@@ -251,8 +302,16 @@
 }
 
 .starttimer {
-    margin-top: 30px;
-    margin-left: 98px;
+    margin-top: 15px;
+    margin-left: 95px;
+    border: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.starttimer img {
+    width: 60px;
+    height: 60px;
 }
 
 .timeranimation {
@@ -260,7 +319,7 @@
     width: 180px;
     background-color: rgb(255, 255, 255);
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 15px;
     overflow: hidden;
 }
 
@@ -293,4 +352,95 @@
     animation-name: timer;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+
+.settings .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.settings .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.settings .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.wallpaper .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.wallpaper .back .img_back {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+.wallpaper .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.weather .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.weather .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.weather .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.maps .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 275px;
+    left: 25px;
+}
+
+.maps .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.maps .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
+}
+
+.timer .back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+    left: 25px;
+}
+
+.timer .back .img_back {
+    height: 20px;
+    width: 20px;
+}
+
+.timer .back .p_back {
+    color: rgb(10, 132, 255);
+    font-size: 20px;
 }

@@ -126,6 +126,22 @@ var watch = new Vue({
 })
 setInterval(() => { watch.SetTime() }, 1000);
 watch.SetTime();
+// let geo = navigator.geolocation;
+// geo.getCurrentPosition(GeoOk, GeoError);
+// function GeoOk(position) {
+//     console.log(position);
+//     let lat = position.coords.latitude;
+//     let long = position.coords.longitude;
+//     console.log(lat, long);
+// }
+// function GeoError(er) {
+//     if (er.code == 1) {
+//         alert("Разрешите доступ к местоположению");
+//     }
+//     else {
+//         alert("Ничего не получилось{{{(>_<)}}}");
+//     }
+// }
 window.addEventListener("load", () => {
     let lat;
     let long;
